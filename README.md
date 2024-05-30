@@ -4,11 +4,11 @@ This is a simple webapplication using python Flask run on the local host. In the
 
 ## Files 
 Static files: contain the javascript and css</br>
-Template files: contain the html for the different pages
-Forms: contains the forms for signup and login
-Main: defines the application in a function
-Models: contains the model classes for users, staples, and groceries to be stored in a database
-Routes: contains the different urls and what they do when receiving a POST or GET request
+Template files: contain the html for the different pages</br>
+Forms: contains the forms for signup and login</br>
+Main: defines the application in a function</br>
+Models: contains the model classes for users, staples, and groceries to be stored in a database</br>
+Routes: contains the different urls and what they do when receiving a POST or GET request</br>
 Run: Simply the code for running the application
 
 ## Setup & Installation
