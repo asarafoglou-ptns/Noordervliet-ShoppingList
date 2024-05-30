@@ -3,7 +3,7 @@
 This is a simple webapplication using python Flask run on the local host. In the application one can create an account and login to that account to save lists of their pantry staples and add these and other items to a shopping list. Shopping list items can be checked and will automatically be placed back into the pantry staple list if they are a staple.  
 
 ## Files 
-Static files: contain the javascript and css__
+Static files: contain the javascript and css</br>
 Template files: contain the html for the different pages
 Forms: contains the forms for signup and login
 Main: defines the application in a function
