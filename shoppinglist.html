@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<link 
+rel="stylesheet" 
+type="text/css" 
+href="{{ url_for('static', filename='shoppinglist.css') }}"
+/>
+
+<div class="gridbox">
+
+    <div class="staplebox">
+        <h2>Pantry Staples</h2>
+        <div>
+            <form method="POST">
+                <input type="text" name="staple" id="staple" class="form-control", placeholder="Add new Pantry Staple"></input>
+                <br />
+                <div align="center">
+                  <button type="submit" class="btn btn-secondary">Add Pantry Staple</button>
+                </div>
+            </form>              
+        </div>
+
+    </br>
+
+        <div class="staplelist">
+            <ul class="list-group list-group-flush" id="staples">
+                {% for staple in user.staples %}
+                <label class="checkedbox">
+                <li class="list-group-item">
+                    <input type="checkbox" checked onClick="checkStaple('{{ staple.id}}')">
+                    <span class="checkmark"></span>
+                  {{staple.staple}}
+                  <button type="button" class="close" onClick="deleteStaple('{{ staple.id }}')">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </li>
+              </label>
+                {% endfor %}
+              </ul>
+        </div>
+    </div>
+
+    <div class="grocerybox">
+        <h2>Shopping List</h2>
+            <form method="POST">
+                <input type="text" name="grocery" id="grocery" class="form-control", placeholder="Add new Grocery"></input>
+                <br />
+                <div align="center">
+                  <button type="submit" class="btn btn-secondary">Add Grocery</button>
+                </div>
+            </form>
+
+    </br>
+            
+        <div class="grocerylist">
+            <ul class="list-group list-group-flush" id="groceries">
+                {% for grocery in user.groceries %}
+                <label class="checkedbox">
+                <li class="list-group-item">
+                  {{ grocery.grocery }}
+                  <div class="pull-right">
+                    <input type="checkbox" onClick="deleteGrocery('{{ grocery.id }}')">
+                    <span class="checkmark"></span>
+                  </input>
+                  </div>
+                </li>
+                </label>
+                {% endfor %}
+              </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
