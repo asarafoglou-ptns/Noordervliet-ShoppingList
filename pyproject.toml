@@ -1,5 +1,5 @@
 [project]
-name = "Noordevliet-ShoppingList"
+name = "shoplist_app"
 version = "0.0.1"
 dependencies = [
   "bcrypt==4.1.3",
