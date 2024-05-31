@@ -13,7 +13,11 @@ Run: Simply the code for running the application
 
 ## Setup & Installation
 
-Acces to internet, pyhton version >=3.12.3.
+Acces to internet, python version >=3.12.3.
+Install the package by running the following code in the command line
+```
+py -m pip install "shoplist_app @ git+https://github.com/asarafoglou-ptns/Noordervliet-ShoppingList"
+```
 
 
 ## Starting The Web Application
